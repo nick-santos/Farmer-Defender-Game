@@ -10,23 +10,36 @@ public class MousePosition : MonoBehaviour
     public GameObject Cylinder;
     public GameObject Seed;
 
+    GridManager gridManager;
+    int tileSize;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gridManager = FindObjectOfType<GridManager>();
+        tileSize = gridManager.UnityGridSize;
     }
 
     // Update is called once per frame
     private void Update()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit))
+        RaycastHit hit;
+        bool hasHit = Physics.Raycast(ray, out hit);
+
+        if (hasHit)
         {
-            transform.position = raycastHit.point;
-        }
+            if (hit.transform.tag == "Tile")
+            {
+                Vector2Int targetCords = hit.transform.GetComponent<Labeller>().cords;
+                transform.position = new Vector3(targetCords.x * tileSize, transform.position.y, targetCords.y * tileSize);
+            }
+
+            //transform.position = hit.point;
+            }
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(Seed, raycastHit.point, Seed.transform.rotation);
+            Instantiate(Seed, transform.position, Seed.transform.rotation);
         }
     }
 }

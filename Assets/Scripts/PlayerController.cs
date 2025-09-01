@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
         // projectile launching
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Vector3 harrowPos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            Instantiate(projectilePrefab, harrowPos, projectilePrefab.transform.rotation);
         }
     }
 }

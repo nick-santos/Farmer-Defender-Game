@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour
 {
-    [SerializeField] float movementSpeed = 1f;
+    //[SerializeField] float movementSpeed = 1f;
 
     Transform selectedUnit;
     bool unitSelected = false;
-
+    
     GridManager gridManager;
+    int tileSize;
 
     // Start is called before the first frame update
     void Start()
     {
         gridManager = FindObjectOfType<GridManager>();
+        tileSize = gridManager.UnityGridSize;
     }
 
     // Update is called once per frame
@@ -34,9 +36,9 @@ public class UnitController : MonoBehaviour
                     if (unitSelected)
                     {
                         Vector2Int targetCords = hit.transform.GetComponent<Labeller>().cords;
-                        Vector2Int startCords = new Vector2Int((int)selectedUnit.position.x, (int)selectedUnit.position.y) / gridManager.UnityGridSize;
+                        Vector2Int startCords = new Vector2Int((int)selectedUnit.position.x, (int)selectedUnit.position.y) / tileSize;
 
-                        selectedUnit.transform.position = new Vector3(targetCords.x, selectedUnit.position.y, targetCords.y);
+                        selectedUnit.transform.position = new Vector3(targetCords.x * tileSize, selectedUnit.position.y, targetCords.y * tileSize);
                         unitSelected = false;
                     }
                 }
