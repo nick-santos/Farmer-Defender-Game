@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class GameModeManager : MonoBehaviour
+public class MouseModeManager : MonoBehaviour
 {
     public GameObject MouseMode;
     public GameObject Placeholder1;

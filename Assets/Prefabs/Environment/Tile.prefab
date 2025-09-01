@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8769347551684181511}
@@ -54,8 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0080316, y: 0.22396982, z: 1.0120414}
-  m_Center: {x: 0.004015863, y: -0.000000059604645, z: -0.0020080209}
+  m_Size: {x: 3.0225544, y: 0.22396982, z: 3.0346866}
+  m_Center: {x: -0.013352394, y: -0.000000059604645, z: -0.0020080209}
 --- !u!114 &4494708794914790445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.11}
-  m_SizeDelta: {x: 1, y: 0.6}
+  m_SizeDelta: {x: 30, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3130028529737037016
 MeshRenderer:
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -268,7 +268,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalScale: {x: 3, y: 0.2, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 628343584927082595}

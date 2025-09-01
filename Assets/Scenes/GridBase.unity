@@ -169,6 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: {x: 5, y: 5}
   unityGridSize: 1
+  targetTag: Tile
+  tilePos: {x: 0, y: 0}
+  tileMin: {x: 0, y: 0}
+  tileMax: {x: 0, y: 0}
 --- !u!1001 &81043832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,7 +359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ed4df09af05984baef75256aa40c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
 --- !u!4 &133560974
 Transform:
   m_ObjectHideFlags: 0

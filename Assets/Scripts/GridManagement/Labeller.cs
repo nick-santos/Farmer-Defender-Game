@@ -30,6 +30,6 @@ public class Labeller : MonoBehaviour
         cords.x = Mathf.RoundToInt(transform.position.x / gridManager.UnityGridSize);
         cords.y = Mathf.RoundToInt(transform.position.z / gridManager.UnityGridSize);
 
-        label.text = $"{cords.x}, {cords.y}";
+        label.text = $"{cords.x},{cords.y}";
     }
 }
